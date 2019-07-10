@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SuperMarket" Class="SuperMarketDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=KaidDuong;Initial Catalog=SuperMarket;Persist Security Info=True;User ID=sa" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="SuperMarketConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SanPham" Member="SanPhams">
+    <Type Name="SanPham">
+      <Column Name="[Ma San Pham]" Member="Ma_San_Pham" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Ten San Pham]" Member="Ten_San_Pham" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Ngay Nhap Hang]" Member="Ngay_Nhap_Hang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Ten Mat Hang]" Member="Ten_Mat_Hang" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Nha San Xuat]" Member="Nha_San_Xuat" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Tinh Trang Hang]" Member="Tinh_Trang_Hang" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhaSanXuat" Member="NhaSanXuats">
+    <Type Name="NhaSanXuat">
+      <Column Name="[Nha San Xuat]" Member="Nha_San_Xuat" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="San_Pham" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
